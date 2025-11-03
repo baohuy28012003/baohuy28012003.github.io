@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đức Huệ & Cam Ly — Thiệp Cưới Online</title>
+  <style>
+    /* Simple, responsive one-file wedding invite template */
+    :root{--accent:#cfa87a;--bg:#fff;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Helvetica Neue', Arial; margin:0; color:#111; background:linear-gradient(180deg,#f8f6f3 0%, #fff 60%)}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:28px 0}
+    .names{font-family:serif;font-size:28px}
+    .subtitle{color:var(--muted);font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:12px}
+    .hero-left{padding:28px;background:rgba(255,255,255,0.8);border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+    .hero-right{border-radius:12px;overflow:hidden}
+    .date{font-size:18px;font-weight:600;color:var(--accent)}
+    .story{margin-top:16px;line-height:1.6;color:#333}
+    .countdown{display:flex;gap:12px;margin-top:18px}
+    .countdown .item{background:#fff;padding:12px;border-radius:8px;min-width:64px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+    .map, .rsvp, .gifts{margin-top:22px;padding:18px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .rsvp input,.rsvp textarea{width:100%;padding:10px;margin-top:8px;border:1px solid #eee;border-radius:8px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:860px){.hero{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.gallery img{height:90px}.names{font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="names">Đức Huệ &amp; Cam Ly</div>
+        <div class="subtitle">Chúng mình trân trọng mời bạn tới chung vui</div>
+      </div>
+      <div class="date">04 Tháng 08, 2025</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Our Love Story</h2>
+        <p class="story">Chúng mình gặp nhau nơi đất khách, xa quê hương nhưng gần trái tim — không ồn ào, không định trước. Qua những điều giản dị nhất, chúng mình đã tìm thấy yêu thương và một người để đồng hành.</p>
+
+        <div class="countdown" aria-live="polite">
+          <div class="item"><div id="days">0</div><small>NGÀY</small></div>
+          <div class="item"><div id="hours">0</div><small>GIỜ</small></div>
+          <div class="item"><div id="mins">0</div><small>PHÚT</small></div>
+          <div class="item"><div id="secs">0</div><small>GIÂY</small></div>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <!-- sample images (replace with your URLs) -->
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60&auto=format&fit=crop" alt="w1">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800&q=60&auto=format&fit=crop" alt="w2">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=60&auto=format&fit=crop" alt="w3">
+        </div>
+
+        <div class="map">
+          <h3>Địa điểm</h3>
+          <p>Nhà hàng ABC, Quận X, Thành phố Y</p>
+          <!-- Google Maps embed placeholder - replace the src with your iframe link -->
+          <iframe width="100%" height="220" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0199317590193!2d144.9630583153181!3d-37.813627979751995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f6f7a7%3A0x5045675218ce6e0!2sMelbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+      </div>
+
+      <aside class="hero-right">
+        <!-- Music + hero photo -->
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=60&auto=format&fit=crop" alt="hero" style="width:100%;height:100%;object-fit:cover;display:block">
+        <audio id="bgm" loop preload="auto" src="" ></audio>
+        <div style="padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));">
+          <p style="margin:0;font-weight:600">Lời mời chính thức</p>
+          <p style="margin:6px 0;color:var(--muted)">Hãy xác nhận có mặt để chúng mình chuẩn bị chu đáo.</p>
+          <a class="btn" href="#rsvp">XÁC NHẬN</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <h3>Xác nhận tham dự</h3>
+      <form onsubmit="handleRSVP(event)">
+        <label>Tên khách mời</label>
+        <input id="rname" required placeholder="Họ và tên">
+        <label>Số điện thoại / Email</label>
+        <input id="rcontact" required placeholder="Số điện thoại hoặc email">
+        <label>Lời chúc (tuỳ chọn)</label>
+        <textarea id="rmsg" rows="3" placeholder="Gửi lời chúc..."></textarea>
+        <div style="margin-top:10px">
+          <button type="submit" class="btn">Gửi lời mời</button>
+          <a class="btn" style="background:#6b7280;margin-left:8px" href="mailto:youremail@example.com?subject=RSVP">Gửi bằng Email</a>
+        </div>
+        <p id="rstatus" style="margin-top:10px;color:green;display:none">Cảm ơn! Chúng tôi đã nhận RSVP của bạn.</p>
+      </form>
+    </section>
+
+    <section class="gifts">
+      <h3>Quà mừng</h3>
+      <p>Nếu bạn muốn gửi quà, vui lòng chọn một trong các lựa chọn: chuyển khoản, ví điện tử, hoặc gửi tại lễ.</p>
+      <ul>
+        <li>Ngân hàng A — 0123456789</li>
+        <li>MoMo/ZaloPay: 0987 654 321</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Thiệp mẫu này được tạo bởi JMII-style template — bạn có thể thay ảnh, địa điểm, và nhạc nền trong phần mã nguồn.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Countdown
+    const target = new Date('2025-08-04T10:00:00');
+    function updateCountdown(){
+      const now = new Date();
+      let diff = Math.max(0, target - now);
+      const days = Math.floor(diff / (1000*60*60*24));
+      diff -= days*(1000*60*60*24);
+      const hours = Math.floor(diff/(1000*60*60));
+      diff -= hours*(1000*60*60);
+      const mins = Math.floor(diff/(1000*60));
+      diff -= mins*(1000*60);
+      const secs = Math.floor(diff/1000);
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('mins').textContent = String(mins).padStart(2,'0');
+      document.getElementById('secs').textContent = String(secs).padStart(2,'0');
+    }
+    setInterval(updateCountdown,1000);
+    updateCountdown();
+
+    // Simple RSVP handler (client-only). Replace with AJAX to your backend to store responses.
+    function handleRSVP(e){
+      e.preventDefault();
+      const name = document.getElementById('rname').value.trim();
+      const contact = document.getElementById('rcontact').value.trim();
+      const msg = document.getElementById('rmsg').value.trim();
+      // Example: send to Formspree or your endpoint. For demo we just show message.
+      document.getElementById('rstatus').style.display='block';
+      // Clear form
+      e.target.reset();
+    }
+
+    // Optional: autoplay music on user gesture
+    document.addEventListener('click', function initAudio(){
+      const bg = document.getElementById('bgm');
+      if(bg.src){
+        bg.play().catch(()=>{});
+      }
+      document.removeEventListener('click', initAudio);
+    });
+  </script>
+</body>
+</html>
