@@ -1,33 +1,22 @@
-
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dating Invitation</title>
+  <title>Đức Huệ & Cam Ly — Thiệp Cưới Online</title>
   <style>
     /* Simple, responsive one-file wedding invite template */
     :root{--accent:#cfa87a;--bg:#fff;--muted:#666}
     *{box-sizing:border-box}
     body{font-family:Inter, system-ui, -apple-system, 'Helvetica Neue', Arial; margin:0; color:#111; background:linear-gradient(180deg,#f8f6f3 0%, #fff 60%)}
-    .container{max-width:980px; margin:0 auto; padding:50px}
-     header{	display		: flex;
-		gap		: 20px;
-		align-items	: center;
-		justify-content	: center;
-		padding		: 28px 0 	}
-    .names{	font-family: 'Great Vibes', cursive;
-		font-size	: 56px;
-		text-align  	: center		}
-    .subtitle{color:var(--muted);font-size:14px; text-align: center}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:28px 0}
+    .names{font-family:serif;font-size:28px}
+    .subtitle{color:var(--muted);font-size:14px}
     .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:12px}
     .hero-left{padding:28px;background:rgba(255,255,255,0.8);border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
-    .hero-right{border-radius	: 12px;overflow:hidden}
-    .date{	font-size	: 12px;
-		font-weight	: 600;
-		color		: var(--accent)}
-    .our‑story { text-align: center}
+    .hero-right{border-radius:12px;overflow:hidden}
+    .date{font-size:18px;font-weight:600;color:var(--accent)}
     .story{margin-top:16px;line-height:1.6;color:#333}
     .countdown{display:flex;gap:12px;margin-top:18px}
     .countdown .item{background:#fff;padding:12px;border-radius:8px;min-width:64px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.04)}
@@ -41,20 +30,20 @@
     @media(max-width:480px){.gallery img{height:90px}.names{font-size:20px}}
   </style>
 </head>
-
 <body>
   <div class="container">
     <header>
       <div>
-        <div class="names">Dating Invitation</div>
-        <div class="subtitle">Bảo Huy trân trọng mời Ngọc Anh</div>
+        <div class="names">Đức Huệ &amp; Cam Ly</div>
+        <div class="subtitle">Chúng mình trân trọng mời bạn tới chung vui</div>
       </div>
+      <div class="date">04 Tháng 08, 2025</div>
     </header>
 
     <section class="hero">
       <div class="hero-left">
-        <h2 class="our‑story">Our Love Story</h2>
-        <p class="story">10 Tháng 11, 2025</p>
+        <h2>Our Love Story</h2>
+        <p class="story">Chúng mình gặp nhau nơi đất khách, xa quê hương nhưng gần trái tim — không ồn ào, không định trước. Qua những điều giản dị nhất, chúng mình đã tìm thấy yêu thương và một người để đồng hành.</p>
 
         <div class="countdown" aria-live="polite">
           <div class="item"><div id="days">0</div><small>NGÀY</small></div>
@@ -118,13 +107,13 @@
     </section>
 
     <footer>
-      <p>Thiệp  này được tạo bởi Bảo Huy.</p>
+      <p>Thiệp mẫu này được tạo bởi JMII-style template — bạn có thể thay ảnh, địa điểm, và nhạc nền trong phần mã nguồn.</p>
     </footer>
   </div>
 
   <script>
     // Countdown
-    const target = new Date('2025-11-10T19:30:00');
+    const target = new Date('2025-08-04T10:00:00');
     function updateCountdown(){
       const now = new Date();
       let diff = Math.max(0, target - now);
