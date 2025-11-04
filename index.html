@@ -11,15 +11,13 @@
     :root{--accent:#cfa87a;--bg:#fff;--muted:#666}
     *{box-sizing:border-box}
     body{font-family:Inter, system-ui, -apple-system, 'Helvetica Neue', Arial; margin:0; color:#111; background:linear-gradient(180deg,#f8f6f3 0%, #fff 60%)}
-    .container{max-width:970px; margin:0 auto; padding:50px}
+    .container{max-width:970px; margin:0 auto; padding:20px}
      header{	display		: flex;
-		gap		: 20px;
+		gap		: 16px;
 		align-items	: center;
 		justify-content	: center;
 		padding		: 28px 0 	}
-    .names{	font-family: 'Great Vibes', cursive;
-		font-size	: 40px;
-		text-align  	: center		}
+    .names { font-family: 'Great Vibes', cursive; font-size: 40px; text-align: center}
     .subtitle{color:var(--muted);font-size:14px; text-align: center}
     .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:12px}
     .hero-left{padding:28px;background:rgba(255,255,255,0.8);border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
@@ -28,10 +26,11 @@
 		font-weight	: 600;
 		color		: var(--accent)}
     .our‑story { font-family: 'Great Vibes', cursive; font-size	: 40px; text-align: center}
-    .story{margin-top:16px;text-align  	: center;line-height:1.6;color:#333}
-    .countdown{display:flex;gap:12px;margin-top:18px}
-    .countdown .item{background:#fff;padding:12px;border-radius:8px;min-width:64px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.04)}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+    .Diadiem {text-align: center}
+    .story{margin-top:16px;text-align  	: center;line-height:1.6;color:var(--accent)}
+    .countdown{display:flex; justify-content: center; gap:12px;margin-top:18px}
+    .countdown .item{background:#fff;padding:12px;border-radius:8px;min-width:64px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.04);color:var(--accent)}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px; }
     .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
     .map, .rsvp, .gifts{margin-top:22px;padding:18px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
     .rsvp input,.rsvp textarea{width:100%;padding:10px;margin-top:8px;border:1px solid #eee;border-radius:8px}
@@ -67,12 +66,12 @@
           <!-- sample images (replace with your URLs) -->
           <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60&auto=format&fit=crop" alt="w1">
           <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800&q=60&auto=format&fit=crop" alt="w2">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=60&auto=format&fit=crop" alt="w3">
+       
         </div>
 
         <div class="map">
-          <h3>Địa điểm</h3>
-          <p>Nhà hàng ABC, Quận X, Thành phố Y</p>
+          <h3 class="Diadiem">Địa điểm</h3>
+          <p class="Diadiem">Nhà hàng ABC, Quận X, Thành phố Y</p>
           <!-- Google Maps embed placeholder - replace the src with your iframe link -->
           <iframe width="100%" height="220" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0199317590193!2d144.9630583153181!3d-37.813627979751995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f6f7a7%3A0x5045675218ce6e0!2sMelbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
         </div>
